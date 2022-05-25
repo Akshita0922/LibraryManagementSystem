@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Library Management System</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<style media="screen">
+body{
+background:linear-gradient(rgba(0,0,0,0.7),#009688);
+color:white;
+}
+table.redTable {
+border: 2px solid #A40808;
+background-color: #EEE7DB;
+width: 100%;
+text-align: center;
+border-collapse: collapse;
+}
+table.redTable td, table.redTable th {
+border: 1px solid #AAAAAA;
+padding: 3px 2px;
+}
+table.redTable tbody td {
+font-size: 13px;
+}
+table.redTable tr:nth-child(even) {
+background: #F5C8BF;
+}
+table.redTable thead {
+background: #A40808;
+}
+table.redTable thead th {
+font-size: 19px;
+font-weight: bold;
+color: #FFFFFF;
+text-align: center;
+border-left: 2px solid #A40808;
+}
+table.redTable thead th:first-child {
+border-left: none;
+}
+
+table.redTable tfoot {
+font-size: 13px;
+font-weight: bold;
+color: #FFFFFF;
+background: #A40808;
+}
+table.redTable tfoot td {
+font-size: 13px;
+}
+table.redTable tfoot .links {
+text-align: right;
+}
+table.redTable tfoot .links a{
+display: inline-block;
+background: #FFFFFF;
+color: #A40808;
+padding: 2px 8px;
+border-radius: 5px;
+}
+</style>
+  </head>
+  <body>
+    {% include "library/navbaradmin.html" %}
+    <br>
+    <br>
+    <h3 class="p-3 mb-2 bg-white text-black" style = 'font-size: 50px;text-align:center;'>Available E-Book in Library !</h3>
+{% if books%}
+ <style>
+    .card {
+      display: inline-block;
+      margin:10px;
+
+    }
+
+    .card-img-top {
+      width: 12rem;
+      height: 15rem;
+    }
+  </style>
+</head>
+
+<body>
+
+
+
+  <div class="w3-row-padding w3-padding-16 w3-center" style="width: 12rem;">
+    <img src="images/C.jpg" class="card-img-top" alt="...">
+    <div class="w3-quarter">
+      <h5 class="card-title">Computer Programming With C</h5>
+      <p class="card-text">by Deitel</p>
+      <a href="PDF/C.pdf" class="btn btn-primary">Download</a>
+    </div>
+  </div>
+  <div class="container p-3 my-3 bg-white text-black" style="width: 12rem;">
+    <img src="books/APS.png" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Java for beginners</h5>
+      <p class="card-text">by Scott Sanderson</p>
+      <a href="books/APS.pdf" class="btn btn-primary">Download</a>
+    </div>
+  </div>
+ <div class="container p-3 my-3 bg-white text-black" style="width: 12rem;">
+    <img src="books/APS.png" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Digital Design</h5>
+      <p class="card-text">by M.Morris Mano</p>
+      <a href="books/APS.pdf" class="btn btn-primary">Download</a>
+    </div>
+  </div>
+  <div class="container p-3 my-3 bg-white text-black" style="width: 12rem;">
+    <img src="books/COA.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Computer Organisation & Architecture</h5>
+      <p class="card-text">by M Morris Mano</p>
+      <a href="books/COA.pdf" class="btn btn-primary">Download</a>
+    </div>
+  </div>
+
+
+
+  <div class="container p-3 my-3 bg-white text-black" style="width: 12rem;">
+    <img src="books/C++ By Deitel.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Probability</h5>
+      <p class="card-text">by Murray R.Spiegel</p>
+      <a href="books/C++ By Deitel.pdf" class="btn btn-primary">Download</a>
+
+    </div>
+  </div>
+  <div class="container p-3 my-3 bg-white text-black" style="width: 12rem;">
+    <img src="books/DSA.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Java Script</h5>
+      <p class="card-text">by Stephen Blumenthal</p>
+      <a href="books/DSA.pdf" class="btn btn-primary">Download</a>
+    </div>
+  </div>
+  <div class="container p-3 my-3 bg-white text-black" style="width: 12rem;">
+    <img src="books/OS galvin.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Operating System Concepts </h5>
+      <p class="card-text">By Galvin</p>
+      <a href="books/OS galvin.pdf" class="btn btn-primary">Download</a>
+
+    </div>
+  </div>
+
+  <div class="container p-3 my-3 bg-white text-black" style="width: 12rem;">
+    <img src="books/cg.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Computer Graphics & Multimedia</h5>
+      <p class="card-text">by Donald D Hearn</p>
+      <a href="books/CG.pdf" class="btn btn-primary">Download</a>
+    </div>
+  </div>
+  <div class="container p-3 my-3 bg-white text-black" style="width: 12rem;">
+    <img src="books/software engineering.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Software Engineering </h5>
+      <p class="card-text">By Ian Sommerville </p>
+      <a href="books/SE.pdf" class="btn btn-primary">Download</a>
+    </div>
+  </div>
+  <div class="container p-3 my-3 bg-white text-black" style="width: 12rem;">
+    <img src="images/python.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title"> Python</h5>
+      <p class="card-text">By Adam Stewart</p>
+      <a href="static images/CN.pdf" class="btn btn-primary">Download</a>
+    </div>
+  </div>
+
+
+
+
+
+
+  <script src="js/jquery.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+{%else%}
+<h1>Have 0 book</h1>
+{%endif%}
+
+
+
+    {% include "library/footer.html" %}
+
+  </body>
+</html>
